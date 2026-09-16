@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertão de Foco - Pomodoro Caatinga & Cerrado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Sertão de Foco</h1>
+        
+        <!-- PARTE 1: INTERFACE DE SELEÇÃO E CARD INFORMATIVO -->
+        <section class="secao-catalogo">
+            <label for="seletor-plantas">Escolha sua semente:</label>
+            <select id="seletor-plantas">
+                <option value="mandacaru" selected>Mandacaru (Cereus jamacaru)</option>
+                <option value="carnauba">Carnaúba (Copernicia prunifera)</option>
+                <option value="ipe">Ipê-Amarelo (Handroanthus ochraceus)</option>
+            </select>
+
+            <!-- Card que mostra info e faz a animação ao passar o mouse -->
+            <div id="card-info" class="card-info">
+                <div class="container-preview">
+                    <!-- Elemento que mudará de semente para planta adulta no hover -->
+                    <div id="preview-planta" class="preview-mandacaru"></div>
+                </div>
+                <div class="texto-info">
+                    <h3 id="info-nome">Mandacaru</h3>
+                    <p id="info-bioma"><strong>Bioma:</strong> Caatinga</p>
+                    <p id="info-descricao">Cacto nativo excelente para reter água. Simboliza a resistência do sertão.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTE 3: ÁREA DE EVOLUÇÃO (ISOMÉTRICA) -->
+        <section class="canvas-isometrico">
+            <div class="bloco-terra">
+                <div id="planta-foco" class="estagio-semente"></div>
+            </div>
+        </section>
+
+        <!-- PARTE 2: MOTOR DO FOCO (CONFIGURAÇÃO DO TIMER) -->
+        <section class="secao-timer">
+            <div id="timer">25:00</div>
+            
+            <div class="config-tempo">
+                <button id="btn-ciclo">+25 min</button>
+                <input type="number" id="tempo-customizado" min="25" placeholder="Minutos customizados (mín. 25)">
+                <button id="btn-definir">Definir</button>
+            </div>
+
+            <div class="controles">
+                <button id="btn-iniciar">Plantar e Focar</button>
+                <button id="btn-cancelar" class="escondido">Abandonar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
