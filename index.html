@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo: Limpe o Armazém</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Limpe o Armazém!</h1>
+        <p>Destrua todas as 8 caixas ao redor para acessar o Baú de Metal no centro.</p>
+        
+        <!-- Tabuleiro do Jogo 3x3 -->
+        <div class="game-board">
+            <!-- Linha 1 -->
+            <div id="box1" class="box" onclick="shootBox('box1')">📦</div>
+            <div id="box2" class="box" onclick="shootBox('box2')">📦</div>
+            <div id="box3" class="box" onclick="shootBox('box3')">📦</div>
+            
+            <!-- Linha 2 (Centro tem o baú principal) -->
+            <div id="box4" class="box" onclick="shootBox('box4')">📦</div>
+            <div id="mainChest" class="chest-locked">🧰</div>
+            <div id="box5" class="box" onclick="shootBox('box5')">📦</div>
+            
+            <!-- Linha 3 -->
+            <div id="box6" class="box" onclick="shootBox('box6')">📦</div>
+            <div id="box7" class="box" onclick="shootBox('box7')">📦</div>
+            <div id="box8" class="box" onclick="shootBox('box8')">📦</div>
+        </div>
+        
+        <!-- Elementos de status -->
+        <h2 id="resultMessage">Caixas restantes: 8</h2>
+        <button id="resetBtn" onclick="resetGame()" style="display:none;">Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
